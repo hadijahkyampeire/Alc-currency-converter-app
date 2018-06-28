@@ -21,6 +21,7 @@ class HomePage extends Component {
   };
 
   render() {
+    const { amount } = this.state;
     const { results: currencies } = data;
     const { converter } = this.props;
     console.log('converted ', converter.converter.convertedCurrency)
@@ -53,11 +54,13 @@ class HomePage extends Component {
               </div>
               <input
                 type="number"
+                min={0}
                 className="form-control"
                 aria-label="Amount (to the nearest dollar)"
                 placeholder="Enter amount"
                 name="amount"
-                value={this.state.amount}
+                required
+                value={amount}
                 onChange={this.handleChange}
               />
             </div>&nbsp;
@@ -88,7 +91,7 @@ class HomePage extends Component {
               </select>
             </div>&nbsp;&nbsp;
             <div id="button">
-              <button type="submit" className="btn btn-primary">
+              <button type="submit" className="btn btn-primary" disabled={Boolean(!this.state.amount)}>
                 convert
               </button>
             </div>
@@ -96,15 +99,15 @@ class HomePage extends Component {
         </div>
         <div className="results">
           <ul>
-            <li>Amount:</li>
-            <li>Currency From:</li>
-            <li>Currency To:</li>
+            <li>Amount:{this.state.amount}</li>
+            <li>Currency From:{this.state.currencyFrom}</li>
+            <li>Currency To:{this.state.currencyTo}</li>
           </ul>
           <span>
-            <strong>Converted USD to UGX</strong>
+            <strong>Converted _{this.state.currencyFrom} to _{this.state.currencyTo}</strong>
           </span>
           <div class="alert alert-primary" role="alert">
-            <h4 class="alert-heading">Wow!! Results! {converter.converter.convertedCurrency}</h4>
+            <h4 class="alert-heading">Wow!! Here are your Results! ==> { amount * converter.converter.convertedCurrency }</h4>
           </div>
         </div>
       </div>
