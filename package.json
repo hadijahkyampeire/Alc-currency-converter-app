@@ -1,10 +1,11 @@
 {
   "name": "alc-currency-converter",
   "version": "0.1.0",
-  "homepage" : "http://hadijahkyampeire.github.io/Alc-currency-converter-app",
+  "homepage": "http://hadijahkyampeire.github.io/Alc-currency-converter-app",
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "gh-pages": "^1.2.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-notify-toast": "^0.5.0",
@@ -22,6 +23,4 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   }
-  
 }
-
