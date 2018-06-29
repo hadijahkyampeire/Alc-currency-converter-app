@@ -4,7 +4,7 @@
   display: block;
   margin: 20px;
   padding: 10px;
-  background-color: rgba(116, 119, 119, 0.418);
+  background-color:white;
   widows: 100%;
   height: 120px;
   font-family: 'Open Sans', sans-serif;
@@ -18,7 +18,7 @@
   padding-left: 20px; 
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: rgba(128, 128, 128, 0.52);
+  background-color: white;
   widows: 100%;
   height: 220px;
   border-radius: 10px;
@@ -31,7 +31,7 @@
   padding-top: 20px;
   padding-bottom: 20px;
   padding-right:20px;
-  background-color: rgba(128, 128, 128, 0.52);
+  background-color: white;
   widows: 100%;
   height: 220px;
   border-radius: 10px;
@@ -44,4 +44,7 @@
 .header{
   margin: 20px;
   font-size: 150%
+}
+.nav{
+  background-color: whitesmoke;
 }
