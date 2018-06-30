@@ -5,8 +5,10 @@ import store from './redux/reducers/index';
 import './App.css';
 import home from '../src/components/Home';
 import Navbar from '../src/components/Navbar';
+import {serviceWorker} from './js/app';
 
 class App extends Component {
+  
   render() {
     return (
       <Provider store={store}>
@@ -24,4 +26,5 @@ class App extends Component {
   }
 }
 
+serviceWorker();
 export default App;
