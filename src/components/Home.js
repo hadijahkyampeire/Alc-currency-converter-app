@@ -24,9 +24,6 @@ class HomePage extends Component {
     const { amount } = this.state;
     const { results: currencies } = data;
     const { converter } = this.props;
-    console.log('converted ', converter.converter.convertedCurrency)
-    // console.log(values)
-
     return (
       <div className="dashboard">
         <div className="header">
@@ -64,9 +61,9 @@ class HomePage extends Component {
                 onChange={this.handleChange}
               />
             </div>&nbsp;
-            <div class="form-group">
-              <label for="exampleFormControlSelect1">Currency From:</label>
-              <select class="form-control" 
+            <div className="form-group">
+              <label htmlFor="exampleFormControlSelect1">Currency From:</label>
+              <select className="form-control" 
                 id="exampleFormControlSelect1"
                 name="currencyFrom"
                 value={this.state.currencyFrom}
@@ -76,10 +73,10 @@ class HomePage extends Component {
                 ))}
               </select>
             </div>&nbsp;
-            <div class="form-group">
-              <label for="currency">Currency To:</label>
+            <div className="form-group">
+              <label htmlFor="currency">Currency To:</label>
               <select
-                class="form-control"
+                className="form-control"
                 id="exampleFormControlSelect2"
                 name="currencyTo"
                 value={this.state.currencyTo}
@@ -106,8 +103,8 @@ class HomePage extends Component {
           <span>
             <strong>Converted _{this.state.currencyFrom} to _{this.state.currencyTo}</strong>
           </span>
-          <div class="alert alert-primary" role="alert">
-            <h4 class="alert-heading">Wow!! Here are your Results! ==> { amount * converter.converter.convertedCurrency }</h4>
+          <div className="alert alert-primary" role="alert">
+            <h4 className="alert-heading">Wow!! Here are your Results! ==> { amount * converter.converter.convertedCurrency }</h4>
           </div>
         </div>
       </div>
