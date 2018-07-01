@@ -6,6 +6,7 @@ import './App.css';
 import home from '../src/components/Home';
 import Navbar from '../src/components/Navbar';
 import {serviceWorker} from './js/app';
+import '../src/js/idb';
 
 class App extends Component {
   
