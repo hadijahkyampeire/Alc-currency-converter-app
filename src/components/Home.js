@@ -64,7 +64,7 @@ class HomePage extends Component {
             <div className="form-group">
               <label htmlFor="exampleFormControlSelect1">Currency From:</label>
               <select className="form-control" 
-                id="exampleFormControlSelect1"
+                id="currencyFrom"
                 name="currencyFrom"
                 value={this.state.currencyFrom}
                 onChange={this.handleChange}>
@@ -77,7 +77,7 @@ class HomePage extends Component {
               <label htmlFor="currency">Currency To:</label>
               <select
                 className="form-control"
-                id="exampleFormControlSelect2"
+                id="currencyTo"
                 name="currencyTo"
                 value={this.state.currencyTo}
                 onChange={this.handleChange}
